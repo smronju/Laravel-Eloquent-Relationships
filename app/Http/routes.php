@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'user'], function () {
+    Route::get('/', ['as' => 'user::lists', 'uses' => 'UserController@index']);
+    Route::get('id/{id}', ['as' => 'user::show', 'uses' => 'UserController@posts'])->where('id', '[0-9]+');
+});
+
+Route::group(['prefix' => 'post'], function(){
+	Route::get('/', ['as' => 'post::lists', 'uses' => 'PostController@index']);
+	Route::get('id/{id}', ['as' => 'post::show', 'uses' => 'PostController@user'])->where('id', '[0-9]+');
+});

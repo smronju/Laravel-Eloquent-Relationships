@@ -8,12 +8,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Eloquent Relationships</a>
+      <a class="navbar-brand" href="/">Eloquent Relationships</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li class="{{ isActive('user*') }}"><a href="{{ route('user::lists') }}">Users</a></li>
+        <li class="{{ isActive('post') }}"><a href="{{ route('post::lists') }}">Posts</a></li>
         <li><a href="#contact">Contact</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>

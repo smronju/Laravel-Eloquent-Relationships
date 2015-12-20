@@ -4,4 +4,4 @@
 	</div>
 </footer>
 
-<script src="assets/js/scripts.js"></script>
+<script src="{{ asset('assets/js/scripts.js') }} "></script>

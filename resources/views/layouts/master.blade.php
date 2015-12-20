@@ -10,7 +10,7 @@
 
   <title>Eloquent Relationships &mdash; @yield('title')</title>
 
-  <link href="assets/css/styles.css" rel="stylesheet">
+  <link href=" {{ asset('assets/css/styles.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 
     <div class="row">
       
-      <div class="col-md-9">
+      <div class="col-md-12">
         @yield('content')
       </div>
 

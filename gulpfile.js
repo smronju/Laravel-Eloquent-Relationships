@@ -12,6 +12,8 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
+	mix.copy('node_modules/bootstrap-sass/assets/fonts/', 'public/assets/fonts');
+
 	mix.copy('node_modules/jquery/dist/jquery.min.js', 'resources/assets/js/jquery.js');
 	mix.copy('node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js', 'resources/assets/js/bootstrap.js')
 
