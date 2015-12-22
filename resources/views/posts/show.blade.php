@@ -12,6 +12,16 @@
 	<small><strong>Author:</strong> {{ $post->user->name }}</small>
 
 	<p>{{ $post->body }}</p>
+
+	<h3>Comments <small>({{ count($post->comments) }})</small></h3>
+
+	<hr/>
+
+
+
+	@foreach ($post->comments as $comment)
+		<p>{{ $comment->comment }}</p>
+	@endforeach
 	
 
 @endsection

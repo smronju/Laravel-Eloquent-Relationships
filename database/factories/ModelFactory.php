@@ -31,3 +31,10 @@ $factory->define(App\Post::class, function(Generator $faker){
 		'published_at' => Carbon::now(),
 	];
 });
+
+$factory->define(App\Comment::class, function(Generator $faker){
+	return [
+		'post_id' => rand(1,50),
+		'comment' => $faker->paragraph
+	];
+});
