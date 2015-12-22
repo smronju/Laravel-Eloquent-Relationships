@@ -24,10 +24,20 @@
 					<td>{{ $user->email }}</td>
 				</tr>
 			</table>
+
+			<h4>Address</h4>
+
+			<hr/>
+
+			<address>
+				{{ $user->address->address }}<br/>
+				<abbr title="Phone">Phone:</abbr> {{ $user->address->phone }}
+			</address>
+
 		</div>
 
 		<div class="col-md-6">
-			<h1>User Posts <small>({{ count($user->posts) }})</small></h1>
+			<h1>{{ $user->name }}'s Posts <small>({{ count($user->posts) }})</small></h1>
 
 			<hr/>
 

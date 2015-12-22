@@ -38,3 +38,11 @@ $factory->define(App\Comment::class, function(Generator $faker){
 		'comment' => $faker->paragraph
 	];
 });
+
+$factory->define(App\Address::class, function(Generator $faker){
+	return [
+		'user_id' => $faker->unique()->randomDigit,
+		'phone' => $faker->phoneNumber,
+		'address' => $faker->address
+	];
+});
