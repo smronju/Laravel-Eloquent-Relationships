@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PostsTableSeeder::class);
         $this->call(CommentsTableSeeder::class);
         $this->call(AddressesTableSeeder::class);
+        $this->call(CountriesTableSeeder::class);
 
         Model::reguard();
     }

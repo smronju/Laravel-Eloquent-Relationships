@@ -16,6 +16,7 @@ use Faker\Generator;
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
+    	'country_id' => rand(1, 5),
         'name' => $faker->name,
         'email' => $faker->email,
         'password' => bcrypt(str_random(10)),
@@ -34,7 +35,7 @@ $factory->define(App\Post::class, function(Generator $faker){
 
 $factory->define(App\Comment::class, function(Generator $faker){
 	return [
-		'post_id' => rand(1,50),
+		'post_id' => rand(1, 100),
 		'comment' => $faker->paragraph
 	];
 });
@@ -44,5 +45,11 @@ $factory->define(App\Address::class, function(Generator $faker){
 		'user_id' => $faker->unique()->randomDigit,
 		'phone' => $faker->phoneNumber,
 		'address' => $faker->address
+	];
+});
+
+$factory->define(App\Country::class, function(Generator $faker){
+	return [
+		'name' => $faker->country
 	];
 });

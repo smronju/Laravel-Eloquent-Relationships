@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Address;
+use App\Country;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
@@ -44,5 +45,9 @@ class User extends Model implements AuthenticatableContract,
 
     public function address(){
         return $this->hasOne(Address::class);
+    }
+
+    public function country(){
+        return $this->belongsTo(Country::class);
     }
 }

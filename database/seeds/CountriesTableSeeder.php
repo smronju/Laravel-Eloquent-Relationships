@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CommentsTableSeeder extends Seeder
+class CountriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,8 +11,8 @@ class CommentsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('comments')->truncate();
+        DB::table('countries')->truncate();
 
-        factory(App\Comment::class, 100)->create();
+        factory(App\Country::class, 5)->create();
     }
 }

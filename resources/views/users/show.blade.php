@@ -31,7 +31,8 @@
 
 			<address>
 				{{ $user->address->address }}<br/>
-				<abbr title="Phone">Phone:</abbr> {{ $user->address->phone }}
+				<abbr title="Phone">Phone:</abbr> {{ $user->address->phone }}<br/>
+				<a href="{{ route('country::posts', $user->country->id) }}">{{ $user->country->name }}</a>
 			</address>
 
 		</div>

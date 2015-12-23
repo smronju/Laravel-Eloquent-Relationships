@@ -24,3 +24,5 @@ Route::group(['prefix' => 'post'], function(){
 	Route::get('/', ['as' => 'post::lists', 'uses' => 'PostController@index']);
 	Route::get('id/{id}', ['as' => 'post::show', 'uses' => 'PostController@user'])->where('id', '[0-9]+');
 });
+
+Route::get('country/{id}', ['as' => 'country::posts', 'uses' => 'CountryController@posts'])->where('id', '[0-9]+');
