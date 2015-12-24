@@ -53,3 +53,16 @@ $factory->define(App\Country::class, function(Generator $faker){
 		'name' => $faker->country
 	];
 });
+
+$factory->define(App\Staff::class, function(Generator $faker){
+	return [
+		'name' => $faker->name
+	];
+});
+
+$factory->define(App\Product::class, function(Generator $faker){
+	return [
+		'name' => $faker->word,
+		'price' => rand(10, 1000)
+	];
+});

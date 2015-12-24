@@ -26,3 +26,13 @@ Route::group(['prefix' => 'post'], function(){
 });
 
 Route::get('country/{id}', ['as' => 'country::posts', 'uses' => 'CountryController@posts'])->where('id', '[0-9]+');
+
+Route::group(['prefix' => 'staff'], function(){
+	Route::get('/', ['as' => 'staff::lists', 'uses' => 'StaffController@index']);
+	Route::get('id/{id}', ['as' => 'staff::show', 'uses' => 'StaffController@show'])->where('id', '[0-9]+');
+});
+
+Route::group(['prefix' => 'products'], function(){
+	Route::get('/', ['as' => 'product::lists', 'uses' => 'ProductController@index']);
+	Route::get('id/{id}', ['as' => 'product::show', 'uses' => 'ProductController@show'])->where('id', '[0-9]+');
+});

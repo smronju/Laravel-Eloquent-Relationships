@@ -31,5 +31,6 @@ class CreatePostsTable extends Migration
     public function down()
     {
         Schema::drop('posts');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
     }
 }

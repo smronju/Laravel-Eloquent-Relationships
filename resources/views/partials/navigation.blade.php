@@ -13,8 +13,9 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li class="{{ isActive('user*') }}"><a href="{{ route('user::lists') }}">Users</a></li>
-        <li class="{{ isActive('post') }}"><a href="{{ route('post::lists') }}">Posts</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="{{ isActive('post*') }}"><a href="{{ route('post::lists') }}">Posts</a></li>
+        <li class="{{ isActive('staff*') }}"><a href="{{ route('staff::lists') }}">Staff</a></li>
+        <li class="{{ isActive('product*') }}"><a href="{{ route('product::lists') }}">Products</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">

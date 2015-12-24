@@ -30,5 +30,6 @@ class CreateAddressesTable extends Migration
     public function down()
     {
         Schema::drop('addresses');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
     }
 }
